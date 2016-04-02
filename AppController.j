@@ -121,7 +121,8 @@
                 {
                     var forecastInfo = JSON.parse(this.responseText);
                     [cityLabel setStringValue: forecastInfo.name + ", " + forecastInfo.sys.country];
-                    [tempLabel setStringValue: forecastInfo.main.temp + "˚C"];
+                    var temperature = parseFloat(forecastInfo.main.temp);
+                    [tempLabel setStringValue: temperature.toFixed(0) + "˚C"];
                     [dropIcon setImage: dropImage];
                     [humidityLabel setStringValue: forecastInfo.main.humidity + "%"];
                     [windIcon setImage: windImage];

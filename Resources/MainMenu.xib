@@ -37,10 +37,10 @@
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lCb-9b-Fwj">
                         <rect key="frame" x="177" y="217" width="126" height="126"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageFrameStyle="grayBezel" id="xbt-LO-ZMy"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" id="xbt-LO-ZMy"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="VCS-ZC-nNt">
-                        <rect key="frame" x="12" y="102" width="444" height="32"/>
+                        <rect key="frame" x="18" y="102" width="444" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="SFi-mY-abs">
                             <font key="font" size="18" name="HelveticaNeue-Thin"/>
