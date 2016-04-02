@@ -2,8 +2,8 @@
  * AppController.j
  * WeatherCapp
  *
- * Created by You on April 1, 2016.
- * Copyright 2016, Your Company All rights reserved.
+ * Created by Szabolcs Toth on April 1, 2016.
+ * Copyright 2016, purzelbaum.hu All rights reserved.
  */
 
 @import <Foundation/CPObject.j>
@@ -19,27 +19,27 @@
     @outlet CPImageView windIcon;
     @outlet CPTextField humidityLabel;
     @outlet CPTextField windLabel;
-    CPImage image01d;
-    CPImage image01n;
-    CPImage image02d;
-    CPImage image02n;
-    CPImage image03d;
-    CPImage image03n;
-    CPImage image04d;
-    CPImage image04n;
-    CPImage image09d;
-    CPImage image09n;
-    CPImage image10d;
-    CPImage image10n;
-    CPImage image11d;
-    CPImage image11n;
-    CPImage image13d;
-    CPImage image13n;
-    CPImage image50d;
-    CPImage image50n;
-    CPImage imageDefault;
-    CPImage dropImage;
-    CPImage windImage;
+    CPImage             image01d;
+    CPImage             image01n;
+    CPImage             image02d;
+    CPImage             image02n;
+    CPImage             image03d;
+    CPImage             image03n;
+    CPImage             image04d;
+    CPImage             image04n;
+    CPImage             image09d;
+    CPImage             image09n;
+    CPImage             image10d;
+    CPImage             image10n;
+    CPImage             image11d;
+    CPImage             image11n;
+    CPImage             image13d;
+    CPImage             image13n;
+    CPImage             image50d;
+    CPImage             image50n;
+    CPImage             imageDefault;
+    CPImage             dropImage;
+    CPImage             windImage;
 }
 
 - (id)init
@@ -67,7 +67,7 @@
         image50n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50n.png"] size:CGSizeMake(120, 120)];
         dropImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"drop.png"] size:CGSizeMake(15.38, 20)];
         windImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"wind.png"]];
-        imageDefault = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"default.png"] size:CGSizeMake(60, 60)];
+        imageDefault = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"default.png"] size:CGSizeMake(120, 120)];
     }
     return self;
 }
@@ -79,13 +79,10 @@
 
 - (void)awakeFromCib
 {
-    // This is called when the cib is done loading.
-    // You can implement this method on any object instantiated from a Cib.
-    // It's a useful hook for setting up current UI values, and other things.
-
-    // In this case, we want the window from Cib to become our full browser window
+  
     [theWindow setFullPlatformWindow:NO];
-     if ("geolocation" in navigator)
+    
+    if ("geolocation" in navigator)
     {
     /* geolocation is available */
         navigator.geolocation.getCurrentPosition(function(position)
@@ -93,10 +90,12 @@
 
             var latitude = position.coords.latitude,
                 longitude =  position.coords.longitude;
-            /*
+            
+            /* Test coordinates
             var latitude = 0,
                 longitude = 0;
             */
+
             var invocation = new XMLHttpRequest(),
                 url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude +  '&APPID=7633665e60305d7e7a42a554052f88e2&units=metric';
 
