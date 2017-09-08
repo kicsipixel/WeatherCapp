@@ -5,19 +5,17 @@
 	<key>XCCCappuccinoObjjIncludePathKey</key>
 	<string>/Users/szabolcs/Development/Cappuccino/WeatherCapp/Frameworks/Debug</string>
 	<key>XCCCappuccinoProcessCappLintKey</key>
-	<true/>
+	<false/>
 	<key>XCCCappuccinoProcessNib2CibKey</key>
 	<true/>
 	<key>XCCCappuccinoProcessObjj2ObjcSkeletonKey</key>
 	<true/>
 	<key>XCCCappuccinoProcessObjjKey</key>
-	<true/>
+	<false/>
 	<key>XCCCappuccinoProjectBinPathsKey</key>
 	<array>
 		<string>~/bin</string>
 	</array>
-	<key>XCCCappuccinoProjectLastEventIDKey</key>
-	<integer>18158641738236361989</integer>
 	<key>XCCCappuccinoProjectNicknameKey</key>
 	<string>WeatherCapp</string>
 	<key>XCCCappuccinoProjectPreviousStatusKey</key>

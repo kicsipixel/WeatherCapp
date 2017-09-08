@@ -44,8 +44,7 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self)
+    if (self = [super init]);
     {
         image01d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"01d.png"] size:CGSizeMake(120, 120)];
         image01n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"01n.png"] size:CGSizeMake(120, 120)];
@@ -90,12 +89,7 @@
 
             var latitude = position.coords.latitude,
                 longitude =  position.coords.longitude;
-            
-            /* Test coordinates
-            var latitude = 0,
-                longitude = 0;
-            */
-
+  
             var invocation = new XMLHttpRequest(),
                 url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude +  '&APPID=7633665e60305d7e7a42a554052f88e2&units=metric';
 
@@ -121,12 +115,14 @@
                 {
                     var forecastInfo = JSON.parse(this.responseText);
                     [cityLabel setStringValue: forecastInfo.name + ", " + forecastInfo.sys.country];
+                    
+                    // Convert tempreture string to float
                     var temperature = parseFloat(forecastInfo.main.temp);
+                    
                     [tempLabel setStringValue: temperature.toFixed(0) + "˚C"];
                     [dropIcon setImage: dropImage];
                     [humidityLabel setStringValue: forecastInfo.main.humidity + "%"];
                     [windIcon setImage: windImage];
-                    CPLog(this.responseText);
                     [windLabel setStringValue: forecastInfo.wind.speed + "km/h"]
 
                     switch (forecastInfo.weather[0].icon)
