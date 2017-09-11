@@ -59,6 +59,7 @@
                    [weatherDictionary setValue: temperature forKey: "Temperature"];
                    [weatherDictionary setValue: forecastInfo.main.humidity forKey: "Humidity"];
                    [weatherDictionary setValue: forecastInfo.wind.speed forKey: "Wind"];
+                   [weatherDictionary setValue: forecastInfo.weather[0].icon forKey: "Icon"];
 
                    [[CPNotificationCenter defaultCenter] postNotificationName: "WeatherDataReceived" object: weatherDictionary]
                 }

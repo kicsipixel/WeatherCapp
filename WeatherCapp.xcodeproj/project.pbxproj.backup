@@ -7,59 +7,33 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		1EF6421CB5140DF5C54865E2 /* AppController.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.j; path = AppController.j; sourceTree = SOURCE_ROOT; };
-		20154F418C437787792366BA /* WeatherAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherAPI.m; path = .XcodeSupport/WeatherAPI.m; sourceTree = SOURCE_ROOT; };
-		86524FD4B0C6FB7407538E5F /* WeatherAPI.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherAPI.j; path = WeatherAPI.j; sourceTree = SOURCE_ROOT; };
-		8F6C45E7B402E8E1595FC9F0 /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
-		CB1F43D2A322D1D7025893A1 /* WeatherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WeatherAPI.h; path = .XcodeSupport/WeatherAPI.h; sourceTree = SOURCE_ROOT; };
 		E164FE29172185F500263CE3 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		14EF404DBEC22260C46E042E /* Cocoa Classes */ = {
-			isa = PBXGroup;
-			children = (
-				CB1F43D2A322D1D7025893A1 /* WeatherAPI.h */,
-				20154F418C437787792366BA /* WeatherAPI.m */,
-				8F6C45E7B402E8E1595FC9F0 /* xcc_general_include.h */,
-			);
-			name = "Cocoa Classes";
-			sourceTree = "<group>";
-		};
-		DF5A4716A971EEF5168EA1A0 /* Cappuccino Source */ = {
-			isa = PBXGroup;
-			children = (
-				1EF6421CB5140DF5C54865E2 /* AppController.j */,
-				86524FD4B0C6FB7407538E5F /* WeatherAPI.j */,
-			);
-			name = "Cappuccino Source";
-			sourceTree = "<group>";
-		};
-		E164FE221721857400263CE3 /*  */ = {
+		E164FE221721857400263CE3 = {
 			isa = PBXGroup;
 			children = (
 				E164FE29172185F500263CE3 /* Resources */,
-				14EF404DBEC22260C46E042E /* Cocoa Classes */,
-				DF5A4716A971EEF5168EA1A0 /* Cappuccino Source */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
-		E164FE231721857400263CE3 /* Project Object */ = {
+		E164FE231721857400263CE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = E164FE261721857400263CE3 /* Build configuration list for PBXProject "Unity-iPhone" */;
+			buildConfigurationList = E164FE261721857400263CE3 /* Build configuration list for PBXProject "Cappuccino" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E164FE221721857400263CE3 /*  */;
+			mainGroup = E164FE221721857400263CE3;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -83,7 +57,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E164FE261721857400263CE3 /* Build configuration list for PBXProject "Unity-iPhone" */ = {
+		E164FE261721857400263CE3 /* Build configuration list for PBXProject "Cappuccino" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E164FE271721857400263CE3 /* Debug */,
@@ -94,5 +68,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E164FE231721857400263CE3 /* Project Object */;
+	rootObject = E164FE231721857400263CE3 /* Project object */;
 }

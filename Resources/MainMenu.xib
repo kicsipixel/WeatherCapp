@@ -24,7 +24,7 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="EhN-JJ-nYd">
                         <rect key="frame" x="18" y="323" width="444" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Country" id="a3p-tD-CEG">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="a3p-tD-CEG">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -33,40 +33,45 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="GhO-Kw-HjK">
                         <rect key="frame" x="30" y="298" width="432" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="39" id="7aC-ZE-Kfz">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="7aC-ZE-Kfz">
+                            <font key="font" metaFont="system" size="15"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="OK8-pC-Y6Y">
-                        <rect key="frame" x="142" y="267" width="31" height="20"/>
+                        <rect key="frame" x="165" y="73" width="31" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="wind" id="NI6-8G-mpk"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="NI6-8G-mpk"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="sgy-ne-CGF">
-                        <rect key="frame" x="176" y="267" width="37" height="17"/>
+                        <rect key="frame" x="199" y="73" width="37" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="2.1" id="AOB-jS-9U7">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="" id="AOB-jS-9U7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="7rr-sy-636">
-                        <rect key="frame" x="219" y="256" width="32" height="40"/>
+                        <rect key="frame" x="242" y="62" width="32" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="drop" id="QRe-wR-vnI"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="QRe-wR-vnI"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="Rx7-Gy-9fZ">
-                        <rect key="frame" x="257" y="267" width="37" height="17"/>
+                        <rect key="frame" x="280" y="73" width="37" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="%" id="EDo-sE-zrI">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="" id="EDo-sE-zrI">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="VH7-Eu-myo">
+                        <rect key="frame" x="180" y="120" width="120" height="120"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aGz-Ul-wU9"/>
+                    </imageView>
                 </subviews>
             </view>
         </window>
@@ -75,6 +80,7 @@
                 <outlet property="cityLabel" destination="EhN-JJ-nYd" id="vM5-oj-oZI"/>
                 <outlet property="dropIcon" destination="7rr-sy-636" id="M5h-CR-DA1"/>
                 <outlet property="humidityLabel" destination="Rx7-Gy-9fZ" id="2z7-bI-TpB"/>
+                <outlet property="mainIcon" destination="VH7-Eu-myo" id="zED-dH-H2m"/>
                 <outlet property="tempLabel" destination="GhO-Kw-HjK" id="q4b-kt-1Zk"/>
                 <outlet property="theWindow" destination="371" id="459"/>
                 <outlet property="windIcon" destination="OK8-pC-Y6Y" id="Wzy-IL-0YQ"/>
@@ -82,8 +88,4 @@
             </connections>
         </customObject>
     </objects>
-    <resources>
-        <image name="drop" width="16" height="20"/>
-        <image name="wind" width="31" height="20"/>
-    </resources>
 </document>

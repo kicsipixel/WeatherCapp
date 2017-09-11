@@ -46,25 +46,25 @@
 {
     if (self = [super init]);
     {
-        image01d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"01d.png"] size:CGSizeMake(120, 120)];
-        image01n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"01n.png"] size:CGSizeMake(120, 120)];
-        image02d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"02d.png"] size:CGSizeMake(120, 120)];
-        image02n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"02n.png"] size:CGSizeMake(120, 120)];
-        image03d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"03d.png"] size:CGSizeMake(120, 120)];
-        image03n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"03n.png"] size:CGSizeMake(120, 120)];
-        image04d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"04d.png"] size:CGSizeMake(120, 120)];
-        image04n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"04n.png"] size:CGSizeMake(120, 120)];
-        image09d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"09d.png"] size:CGSizeMake(120, 120)];
-        image09n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"09n.png"] size:CGSizeMake(120, 120)];
-        image10d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"10d.png"] size:CGSizeMake(120, 120)];
-        image10n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"10n.png"] size:CGSizeMake(120, 120)];
-        image11d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"11d.png"] size:CGSizeMake(120, 120)];
-        image11n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"11n.png"] size:CGSizeMake(120, 120)];
-        image13d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"13d.png"] size:CGSizeMake(120, 120)];
-        image13n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"13n.png"] size:CGSizeMake(120, 120)];
-        image50d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50d.png"] size:CGSizeMake(120, 120)];
-        image50n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50n.png"] size:CGSizeMake(120, 120)];
-        imageDefault = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"deafult.png"] size:CGSizeMake(120, 120)];
+        image01d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"01d.png"]];
+        image01n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"01n.png"]];
+        image02d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"02d.png"]];
+        image02n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"02n.png"]];
+        image03d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"03d.png"]];
+        image03n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"03n.png"]];
+        image04d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"04d.png"]];
+        image04n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"04n.png"]];
+        image09d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"09d.png"]];
+        image09n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"09n.png"]];
+        image10d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"10d.png"]];
+        image10n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"10n.png"]];
+        image11d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"11d.png"]];
+        image11n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"11n.png"]];
+        image13d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"13d.png"]];
+        image13n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"13n.png"]];
+        image50d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50d.png"]];
+        image50n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50n.png"]];
+        imageDefault = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"deafult.png"]];
        [[CPNotificationCenter defaultCenter] addObserver:self selector: @selector(buildUI:) name: "WeatherDataReceived" object: nil];
 
         weatherAPI = [[WeatherAPI alloc]init];
@@ -88,15 +88,108 @@
 {
     [cityLabel setStringValue: [[aNotification object] objectForKey: "City"]+ ", " + [[aNotification object] objectForKey: "Country"]];
     var temperature = [[aNotification object] objectForKey: "Temperature"];
-    [tempLabel setStringValue: temperature.toFixed(0)];
+    [tempLabel setStringValue: temperature.toFixed(0) + " C"];
 
     var  windImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"wind.png"]];
     [windIcon setImage: windImage];
-    [windLabel setStringValue: [[aNotification object] objectForKey: "Wind"]];
+    [windLabel setStringValue: [[aNotification object] objectForKey: "Wind"] + "km/h" ];
 
     var dropImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"drop.png"]];
     [dropIcon setImage: dropImage];
-    [humidityLabel setStringValue: [[aNotification object] objectForKey: "Humidity"]];
+    [humidityLabel setStringValue: [[aNotification object] objectForKey: "Humidity"] + "%"];
+
+    switch ([[aNotification object] objectForKey: "Icon"])
+                    {
+                        case "01d":
+                        [mainIcon setImage: image01d];
+                        break;
+
+                        case "01n":
+                        [mainIcon setImage: image01n];
+                        break;
+
+                        case "02d":
+                        [mainIcon setImage: image02d];
+                        break;
+
+                        case "02n":
+                        [mainIcon setImage: image02n];
+                        break;
+
+                        case "03d":
+                        [mainIcon setImage: image03d];
+                        break;
+
+                        case "03n":
+                        [mainIcon setImage: image03n];
+                        break;
+
+                        case "04d":
+                        [mainIcon setImage: image04d];
+                        break;
+
+                        case "04n":
+                        [mainIcon setImage: image04n];
+                        break;
+
+                        case "09d":
+                        [mainIcon setImage: image09d];
+                        break;
+
+                        case "09n":
+                        [mainIcon setImage: image09n];
+                        break;
+
+                        case "10d":
+                        [mainIcon setImage: image10d];
+                        break;
+
+                        case "10n":
+                        [mainIcon setImage: image10n];
+                        break;
+
+                        case "11d":
+                        [mainIcon setImage: image11d];
+                        break;
+
+                        case "11n":
+                        [mainIcon setImage: image11n];
+                        break;
+
+                        case "10d":
+                        [mainIcon setImage: image10d];
+                        break;
+
+                        case "10n":
+                        [mainIcon setImage: image10n];
+                        break;
+
+                        case "11d":
+                        [mainIcon setImage: image11d];
+                        break;
+
+                        case "11n":
+                        [mainIcon setImage: image11n];
+                        break;
+
+                        case "13d":
+                        [mainIcon setImage: image13d];
+                        break;
+
+                        case "13n":
+                        [mainIcon setImage: image13n];
+                        break;
+
+                        case "50d":
+                        [mainIcon setImage: image50d];
+                        break;
+
+                        case "50n":
+                        [mainIcon setImage: image50n];
+                        break;
+
+                        deafult: [mainIcon setImage: imageDefault];
+                    }
 }
 
 @end
