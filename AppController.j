@@ -39,8 +39,6 @@
     CPImage             image50d;
     CPImage             image50n;
     CPImage             imageDefault;
-    CPImage             dropImage;
-    CPImage             windImage;
     WeatherAPI         weatherAPI;
 }
 
@@ -66,10 +64,8 @@
         image13n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"13n.png"] size:CGSizeMake(120, 120)];
         image50d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50d.png"] size:CGSizeMake(120, 120)];
         image50n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50n.png"] size:CGSizeMake(120, 120)];
-        dropImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"drop.png"] size:CGSizeMake(16, 20)];
-        windImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"wind.png"]];
         imageDefault = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"deafult.png"] size:CGSizeMake(120, 120)];
-       [[CPNotificationCenter defaultCenter] addObserver:self selector: @selector(dummy:) name: "WeatherDataReceived" object: nil];
+       [[CPNotificationCenter defaultCenter] addObserver:self selector: @selector(buildUI:) name: "WeatherDataReceived" object: nil];
 
         weatherAPI = [[WeatherAPI alloc]init];
         [weatherAPI getWeatherData];
@@ -80,21 +76,27 @@
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
     // This is called when the application is done loading.
-      
 }
 
-- (void)setScreen
-{
-    [dropIcon setImage: dropImage];
-}
 - (void)awakeFromCib
 {
     [theWindow setFullPlatformWindow:NO];
+
 }
 
-- (void)dummy:(CPNotification)aNotification
+- (void)buildUI:(CPNotification)aNotification
 {
-  CPLog([aNotification object]);
+    [cityLabel setStringValue: [[aNotification object] objectForKey: "City"]+ ", " + [[aNotification object] objectForKey: "Country"]];
+    var temperature = [[aNotification object] objectForKey: "Temperature"];
+    [tempLabel setStringValue: temperature.toFixed(0)];
+
+    var  windImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"wind.png"]];
+    [windIcon setImage: windImage];
+    [windLabel setStringValue: [[aNotification object] objectForKey: "Wind"]];
+
+    var dropImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"drop.png"]];
+    [dropIcon setImage: dropImage];
+    [humidityLabel setStringValue: [[aNotification object] objectForKey: "Humidity"]];
 }
 
 @end
