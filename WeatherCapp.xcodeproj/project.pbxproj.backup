@@ -7,33 +7,57 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		398142EBBA5AA7437E9CD644 /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
+		5B77483E81ECCC0101F5774C /* AppController.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.j; path = AppController.j; sourceTree = SOURCE_ROOT; };
+		9ADF41AEB669F83CF228B2E9 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = .XcodeSupport/AppController.m; sourceTree = SOURCE_ROOT; };
 		E164FE29172185F500263CE3 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		EAAB46699870A7820DE18D3A /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = .XcodeSupport/AppController.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		E164FE221721857400263CE3 = {
+		5E3F438F8D948A1558DA1F81 /* Cocoa Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EAAB46699870A7820DE18D3A /* AppController.h */,
+				9ADF41AEB669F83CF228B2E9 /* AppController.m */,
+				398142EBBA5AA7437E9CD644 /* xcc_general_include.h */,
+			);
+			name = "Cocoa Classes";
+			sourceTree = "<group>";
+		};
+		AB864ED6B974F19D99EBDF8A /* Cappuccino Source */ = {
+			isa = PBXGroup;
+			children = (
+				5B77483E81ECCC0101F5774C /* AppController.j */,
+			);
+			name = "Cappuccino Source";
+			sourceTree = "<group>";
+		};
+		E164FE221721857400263CE3 /*  */ = {
 			isa = PBXGroup;
 			children = (
 				E164FE29172185F500263CE3 /* Resources */,
+				5E3F438F8D948A1558DA1F81 /* Cocoa Classes */,
+				AB864ED6B974F19D99EBDF8A /* Cappuccino Source */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
-		E164FE231721857400263CE3 /* Project object */ = {
+		E164FE231721857400263CE3 /* Project Object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = E164FE261721857400263CE3 /* Build configuration list for PBXProject "Cappuccino" */;
+			buildConfigurationList = E164FE261721857400263CE3 /* Build configuration list for PBXProject "Unity-iPhone" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E164FE221721857400263CE3;
+			mainGroup = E164FE221721857400263CE3 /*  */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -57,7 +81,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E164FE261721857400263CE3 /* Build configuration list for PBXProject "Cappuccino" */ = {
+		E164FE261721857400263CE3 /* Build configuration list for PBXProject "Unity-iPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E164FE271721857400263CE3 /* Debug */,
@@ -68,5 +92,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E164FE231721857400263CE3 /* Project object */;
+	rootObject = E164FE231721857400263CE3 /* Project Object */;
 }

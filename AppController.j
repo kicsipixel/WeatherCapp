@@ -8,6 +8,7 @@
 
 @import <Foundation/CPObject.j>
 @import <AppKit/AppKit.j>
+@import "WeatherAPI.j"
 
 @implementation AppController : CPObject
 {
@@ -40,6 +41,7 @@
     CPImage             imageDefault;
     CPImage             dropImage;
     CPImage             windImage;
+    WeatherAPI         weatherAPI;
 }
 
 - (id)init
@@ -64,9 +66,13 @@
         image13n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"13n.png"] size:CGSizeMake(120, 120)];
         image50d = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50d.png"] size:CGSizeMake(120, 120)];
         image50n = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"50n.png"] size:CGSizeMake(120, 120)];
-        dropImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"drop.png"] size:CGSizeMake(15.38, 20)];
+        dropImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"drop.png"] size:CGSizeMake(16, 20)];
         windImage = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"wind.png"]];
         imageDefault = [[CPImage alloc] initWithContentsOfFile:[[CPBundle mainBundle] pathForResource:@"deafult.png"] size:CGSizeMake(120, 120)];
+       [[CPNotificationCenter defaultCenter] addObserver:self selector: @selector(dummy:) name: "WeatherDataReceived" object: nil];
+
+        weatherAPI = [[WeatherAPI alloc]init];
+        [weatherAPI getWeatherData];
     }
     return self;
 }
@@ -74,163 +80,21 @@
 - (void)applicationDidFinishLaunching:(CPNotification)aNotification
 {
     // This is called when the application is done loading.
+      
 }
 
+- (void)setScreen
+{
+    [dropIcon setImage: dropImage];
+}
 - (void)awakeFromCib
 {
-  
     [theWindow setFullPlatformWindow:NO];
-    
-    if ("geolocation" in navigator)
-    {
-    /* geolocation is available */
-        navigator.geolocation.getCurrentPosition(function(position)
-        {
+}
 
-            var latitude = position.coords.latitude,
-                longitude =  position.coords.longitude;
-  
-            var invocation = new XMLHttpRequest(),
-                url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude +  '&APPID=7633665e60305d7e7a42a554052f88e2&units=metric';
-
-        function callOtherDomain()
-        {
-            if (invocation)
-            {
-                invocation.open('GET', url, true);
-                invocation.onreadystatechange = handler;
-                invocation.send();
-            }
-            else
-            {
-                alert("No Invocation TookPlace At All");
-            }
-        }
-
-        function handler(evtXHR)
-        {
-            if (invocation.readyState == 4)
-            {
-                if (invocation.status == 200)
-                {
-                    var forecastInfo = JSON.parse(this.responseText);
-                    [cityLabel setStringValue: forecastInfo.name + ", " + forecastInfo.sys.country];
-                    
-                    // Convert tempreture string to float
-                    var temperature = parseFloat(forecastInfo.main.temp);
-                    
-                    [tempLabel setStringValue: temperature.toFixed(0) + "˚C"];
-                    [dropIcon setImage: dropImage];
-                    [humidityLabel setStringValue: forecastInfo.main.humidity + "%"];
-                    [windIcon setImage: windImage];
-                    [windLabel setStringValue: forecastInfo.wind.speed + "km/h"]
-
-                    switch (forecastInfo.weather[0].icon)
-                    {
-                        case "01d":
-                        [mainIcon setImage: image01d];
-                        break;
-
-                        case "01n":
-                        [mainIcon setImage: image01n];
-                        break;
-
-                        case "02d":
-                        [mainIcon setImage: image02d];
-                        break;
-
-                        case "02n":
-                        [mainIcon setImage: image02n];
-                        break;
-
-                        case "03d":
-                        [mainIcon setImage: image03d];
-                        break;
-
-                        case "03n":
-                        [mainIcon setImage: image03n];
-                        break;
-
-                        case "04d":
-                        [mainIcon setImage: image04d];
-                        break;
-
-                        case "04n":
-                        [mainIcon setImage: image04n];
-                        break;
-
-                        case "09d":
-                        [mainIcon setImage: image09d];
-                        break;
-
-                        case "09n":
-                        [mainIcon setImage: image09n];
-                        break;
-
-                        case "10d":
-                        [mainIcon setImage: image10d];
-                        break;
-
-                        case "10n":
-                        [mainIcon setImage: image10n];
-                        break;
-
-                        case "11d":
-                        [mainIcon setImage: image11d];
-                        break;
-
-                        case "11n":
-                        [mainIcon setImage: image11n];
-                        break;
-
-                        case "10d":
-                        [mainIcon setImage: image10d];
-                        break;
-
-                        case "10n":
-                        [mainIcon setImage: image10n];
-                        break;
-
-                        case "11d":
-                        [mainIcon setImage: image11d];
-                        break;
-
-                        case "11n":
-                        [mainIcon setImage: image11n];
-                        break;
-
-                        case "13d":
-                        [mainIcon setImage: image13d];
-                        break;
-
-                        case "13n":
-                        [mainIcon setImage: image13n];
-                        break;
-
-                        case "50d":
-                        [mainIcon setImage: image50d];
-                        break;
-
-                        case "50n":
-                        [mainIcon setImage: image50n];
-                        break;
-
-                        deafult: [mainIcon setImage: imageDefault];
-                    }
-                }
-            else
-                alert("Invocation Errors Occured");
-            }
-        }
-
-        callOtherDomain();
-            })
-        }
-    else
-    {
-    /* geolocation IS NOT available */
-        alert("Your browser doesn't support geolocation.");
-    }
+- (void)dummy:(CPNotification)aNotification
+{
+  CPLog([aNotification object]);
 }
 
 @end
