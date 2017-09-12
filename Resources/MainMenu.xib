@@ -55,7 +55,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="NI6-8G-mpk"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="sgy-ne-CGF">
-                        <rect key="frame" x="160" y="60" width="60" height="17"/>
+                        <rect key="frame" x="160" y="60" width="62" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="" id="AOB-jS-9U7">
                             <font key="font" size="14" name="Helvetica"/>
@@ -69,7 +69,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="QRe-wR-vnI"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="Rx7-Gy-9fZ">
-                        <rect key="frame" x="322" y="60" width="37" height="17"/>
+                        <rect key="frame" x="322" y="60" width="40" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="" id="EDo-sE-zrI">
                             <font key="font" size="14" name="Helvetica"/>
