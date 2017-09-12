@@ -27,7 +27,7 @@
                 longitude =  position.coords.longitude;
   
             var invocation = new XMLHttpRequest(),
-                url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude +  '&APPID=7633665e60305d7e7a42a554052f88e2&units=metric';
+                url = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude +  '&APPID=7633665e60305d7e7a42a554052f88e2&units=metric';
 
         function callOtherDomain()
         {
