@@ -21,54 +21,64 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="AY7-cn-xHv">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="background" id="EjZ-WD-OOP"/>
+                    </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="EhN-JJ-nYd">
-                        <rect key="frame" x="18" y="323" width="444" height="17"/>
+                        <rect key="frame" x="0.0" y="99" width="484" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="a3p-tD-CEG">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" size="20" name="Helvetica"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.68235294120000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="kEa-lA-vAJ">
+                        <rect key="frame" x="248" y="126" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Mcx-v4-yNA"/>
+                    </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="GhO-Kw-HjK">
-                        <rect key="frame" x="30" y="298" width="432" height="17"/>
+                        <rect key="frame" x="227" y="132" width="26" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="7aC-ZE-Kfz">
-                            <font key="font" metaFont="system" size="15"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" size="20" name="Helvetica"/>
+                            <color key="textColor" red="0.60784313725490191" green="0.68235294117647061" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="OK8-pC-Y6Y">
-                        <rect key="frame" x="165" y="73" width="31" height="20"/>
+                        <rect key="frame" x="127" y="58" width="24" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="NI6-8G-mpk"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="sgy-ne-CGF">
-                        <rect key="frame" x="199" y="73" width="37" height="17"/>
+                        <rect key="frame" x="160" y="60" width="60" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="" id="AOB-jS-9U7">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" size="14" name="Helvetica"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.68235294120000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="7rr-sy-636">
-                        <rect key="frame" x="242" y="62" width="32" height="40"/>
+                        <rect key="frame" x="300" y="60" width="12" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="QRe-wR-vnI"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" allowsCharacterPickerTouchBarItem="NO" id="Rx7-Gy-9fZ">
-                        <rect key="frame" x="280" y="73" width="37" height="17"/>
+                        <rect key="frame" x="322" y="60" width="37" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" placeholderString="" id="EDo-sE-zrI">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <font key="font" size="14" name="Helvetica"/>
+                            <color key="textColor" red="0.60784313729999995" green="0.68235294120000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="VH7-Eu-myo">
-                        <rect key="frame" x="180" y="120" width="120" height="120"/>
+                        <rect key="frame" x="180" y="180" width="120" height="120"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aGz-Ul-wU9"/>
                     </imageView>
@@ -77,6 +87,7 @@
         </window>
         <customObject id="450" customClass="AppController">
             <connections>
+                <outlet property="celsiusIcon" destination="kEa-lA-vAJ" id="ssN-qX-UMO"/>
                 <outlet property="cityLabel" destination="EhN-JJ-nYd" id="vM5-oj-oZI"/>
                 <outlet property="dropIcon" destination="7rr-sy-636" id="M5h-CR-DA1"/>
                 <outlet property="humidityLabel" destination="Rx7-Gy-9fZ" id="2z7-bI-TpB"/>
@@ -88,4 +99,7 @@
             </connections>
         </customObject>
     </objects>
+    <resources>
+        <image name="background" width="480" height="360"/>
+    </resources>
 </document>

@@ -7,25 +7,34 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		0F374D4EA7C2EE0F3F4D6DA8 /* AppController.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.j; path = AppController.j; sourceTree = SOURCE_ROOT; };
-		31E14E178043FF40F9911BBF /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
-		56EC4A0E82822BD94C41DFFE /* WeatherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WeatherAPI.h; path = .XcodeSupport/WeatherAPI.h; sourceTree = SOURCE_ROOT; };
-		62C142C19EB3E3C47B9EE2AA /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = .XcodeSupport/AppController.h; sourceTree = SOURCE_ROOT; };
-		704E44338FAF22381437D6C5 /* WeatherAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherAPI.m; path = .XcodeSupport/WeatherAPI.m; sourceTree = SOURCE_ROOT; };
-		8571432CA289F9505EBF4B94 /* WeatherAPI.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherAPI.j; path = WeatherAPI.j; sourceTree = SOURCE_ROOT; };
-		98BC43CBA92C926D957D7EE2 /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = .XcodeSupport/AppController.m; sourceTree = SOURCE_ROOT; };
+		025743C29B2CBECCD9DAD98E /* AppController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.m; path = .XcodeSupport/AppController.m; sourceTree = SOURCE_ROOT; };
+		031C464693EC7F71EC17DC76 /* WeatherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WeatherAPI.h; path = .XcodeSupport/WeatherAPI.h; sourceTree = SOURCE_ROOT; };
+		6CC44F1DAEB0EA904E9285F7 /* xcc_general_include.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = xcc_general_include.h; path = .XcodeSupport/xcc_general_include.h; sourceTree = SOURCE_ROOT; };
+		7D974FE6A2EE848A5DF16AC0 /* AppController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = .XcodeSupport/AppController.h; sourceTree = SOURCE_ROOT; };
+		91404020B6FC73AAC408E1D3 /* WeatherAPI.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherAPI.j; path = WeatherAPI.j; sourceTree = SOURCE_ROOT; };
+		A51C47F2A0AC738FAFF75A34 /* WeatherAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WeatherAPI.m; path = .XcodeSupport/WeatherAPI.m; sourceTree = SOURCE_ROOT; };
+		DC684667B6B7F04203FC7B39 /* AppController.j */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppController.j; path = AppController.j; sourceTree = SOURCE_ROOT; };
 		E164FE29172185F500263CE3 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		D8444719AB45E52BB1529CD8 /* Cocoa Classes */ = {
+		7D80453389A849D59D73D111 /* Cappuccino Source */ = {
 			isa = PBXGroup;
 			children = (
-				62C142C19EB3E3C47B9EE2AA /* AppController.h */,
-				98BC43CBA92C926D957D7EE2 /* AppController.m */,
-				56EC4A0E82822BD94C41DFFE /* WeatherAPI.h */,
-				704E44338FAF22381437D6C5 /* WeatherAPI.m */,
-				31E14E178043FF40F9911BBF /* xcc_general_include.h */,
+				DC684667B6B7F04203FC7B39 /* AppController.j */,
+				91404020B6FC73AAC408E1D3 /* WeatherAPI.j */,
+			);
+			name = "Cappuccino Source";
+			sourceTree = "<group>";
+		};
+		BECC4B56B9F73A9450D3346E /* Cocoa Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D974FE6A2EE848A5DF16AC0 /* AppController.h */,
+				025743C29B2CBECCD9DAD98E /* AppController.m */,
+				031C464693EC7F71EC17DC76 /* WeatherAPI.h */,
+				A51C47F2A0AC738FAFF75A34 /* WeatherAPI.m */,
+				6CC44F1DAEB0EA904E9285F7 /* xcc_general_include.h */,
 			);
 			name = "Cocoa Classes";
 			sourceTree = "<group>";
@@ -34,18 +43,9 @@
 			isa = PBXGroup;
 			children = (
 				E164FE29172185F500263CE3 /* Resources */,
-				D8444719AB45E52BB1529CD8 /* Cocoa Classes */,
-				EB9241FABEE1509DECD7F664 /* Cappuccino Source */,
+				BECC4B56B9F73A9450D3346E /* Cocoa Classes */,
+				7D80453389A849D59D73D111 /* Cappuccino Source */,
 			);
-			sourceTree = "<group>";
-		};
-		EB9241FABEE1509DECD7F664 /* Cappuccino Source */ = {
-			isa = PBXGroup;
-			children = (
-				0F374D4EA7C2EE0F3F4D6DA8 /* AppController.j */,
-				8571432CA289F9505EBF4B94 /* WeatherAPI.j */,
-			);
-			name = "Cappuccino Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
