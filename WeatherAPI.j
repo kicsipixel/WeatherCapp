@@ -7,7 +7,6 @@
  */
 
 @import <Foundation/CPObject.j>
-@import <AppKit/AppKit.j>
 
 @implementation WeatherAPI : CPObject
 {
