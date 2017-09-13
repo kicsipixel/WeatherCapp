@@ -11,5 +11,6 @@
 @property (assign) IBOutlet NSImageView* windIcon;
 @property (assign) IBOutlet NSTextField* humidityLabel;
 @property (assign) IBOutlet NSTextField* windLabel;
+@property (assign) IBOutlet NSImageView* celsiusIcon;
 
 @end
